@@ -7,7 +7,6 @@
 
 body {
     background: rgb(58, 58, 58);
-    overflow-x: hidden;
 }
 
 /*=============== SLIDER ===============*/
@@ -19,6 +18,7 @@ body {
     display: flex;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .img {
@@ -34,13 +34,8 @@ body {
     display: block;
     position: inherit;
     right: 0;
-    /* animation: 0.5s ease-in slider; */
-    /* animation-iteration-count: 1; */
-}
-
-.img-fixed {
-    display: block;
-    right: 0;
+    animation: 0.5s ease-in slider;
+    animation-iteration-count: 1;
 }
 
 .slider-card {
@@ -152,7 +147,7 @@ body {
 }
 
 /*=============== ANIMATION ===============*/
-/* @keyframes slider {
+@keyframes slider {
     from {transform: translateX(100%);}
     to {transform: translateX(0);}
-} */
+}
