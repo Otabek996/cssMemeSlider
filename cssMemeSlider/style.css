@@ -34,7 +34,7 @@ body {
     display: block;
     position: inherit;
     right: 0;
-    animation: 0.5s ease-in showImg;
+    animation: 0.5s ease-in slider;
 }
 
 .img-fixed {
@@ -151,8 +151,7 @@ body {
 }
 
 /*=============== ANIMATION ===============*/
-@keyframes showImg {
-    from {
-        transform: translateX(100%);
-    }
+@keyframes slider {
+    from {transform: translateX(100%);}
+    to {transform: translateX(0);}
 }
