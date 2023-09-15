@@ -1,3 +1,4 @@
+// ==================== SLIDER ====================
 const imgOne = document.getElementById("imgOne");
 const imgTwo = document.getElementById("imgTwo");
 const imgThree = document.getElementById("imgThree");
@@ -7,20 +8,37 @@ const btnOne = document.getElementById("btnOne");
 const btnTwo = document.getElementById("btnTwo");
 const btnThree = document.getElementById("btnThree");
 
-const changeImg = (img) => {
-    if (imgOne.classList.value == "img img-active") imgOne.classList.remove("img-active");
-    if (imgTwo.classList.value == "img img-active") imgTwo.classList.remove("img-active");
-    if (imgThree.classList.value == "img img-active") imgThree.classList.remove("img-active");
+const textImage = {
+    imgOne: "Project start",
+    imgTwo: "Night before deadline",
+    imgThree: "On deadline day",
+};
+
+const changeImg = (img, btn) => {
+    if (imgOne.classList.value == "img img-active") {
+        imgOne.classList.remove("img-active");
+        btnOne.classList.remove("active");
+    };
+    if (imgTwo.classList.value == "img img-active") {
+        imgTwo.classList.remove("img-active");
+        btnTwo.classList.remove("active");
+    };
+    if (imgThree.classList.value == "img img-active") {
+        imgThree.classList.remove("img-active");
+        btnThree.classList.remove("active");
+    };
 
     img.classList.add("img-active");
+    btn.classList.add("active");
+    text.innerText = textImage[img.id];
 }
 
 btnOne.addEventListener("click", () => {
-    changeImg(imgOne);
+    changeImg(imgOne, btnOne);
 })
 btnTwo.addEventListener("click", () => {
-    changeImg(imgTwo);
+    changeImg(imgTwo, btnTwo);
 })
 btnThree.addEventListener("click", () => {
-    changeImg(imgThree);
+    changeImg(imgThree, btnThree);
 })
