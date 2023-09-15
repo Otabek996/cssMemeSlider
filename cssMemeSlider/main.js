@@ -2,16 +2,19 @@
 const imgOne = document.getElementById("imgOne");
 const imgTwo = document.getElementById("imgTwo");
 const imgThree = document.getElementById("imgThree");
+const imgFour = document.getElementById("imgFour");
 const text = document.getElementById("text");
 
 const btnOne = document.getElementById("btnOne");
 const btnTwo = document.getElementById("btnTwo");
 const btnThree = document.getElementById("btnThree");
+const btnFour = document.getElementById("btnFour");
 
 const textImage = {
     imgOne: "Project start",
     imgTwo: "Night before deadline",
     imgThree: "On deadline day",
+    imgFour: "We are ******"
 };
 
 const changeImg = (img, btn) => {
@@ -26,6 +29,10 @@ const changeImg = (img, btn) => {
     if (imgThree.classList.value == "img img-active") {
         imgThree.classList.remove("img-active");
         btnThree.classList.remove("active");
+    };
+    if (imgFour.classList.value == "img img-active") {
+        imgFour.classList.remove("img-active");
+        btnFour.classList.remove("active");
     };
 
     img.classList.add("img-active");
@@ -42,3 +49,7 @@ btnTwo.addEventListener("click", () => {
 btnThree.addEventListener("click", () => {
     changeImg(imgThree, btnThree);
 })
+btnFour.addEventListener("click", () => {
+    changeImg(imgFour, btnFour);
+})
+
