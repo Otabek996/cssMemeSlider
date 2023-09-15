@@ -153,9 +153,6 @@ body {
 /*=============== ANIMATION ===============*/
 @keyframes showImg {
     from {
-        right: -100%;
-    }
-    to {
-        right: 0;
+        transform: translateX(100%);
     }
 }
