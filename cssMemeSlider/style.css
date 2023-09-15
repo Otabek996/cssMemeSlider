@@ -7,6 +7,7 @@
 
 body {
     background: rgb(58, 58, 58);
+    overflow-x: hidden;
 }
 
 /*=============== SLIDER ===============*/
@@ -32,6 +33,12 @@ body {
 .img-active {
     display: block;
     position: inherit;
+    right: 0;
+    animation: 0.5s ease-in showImg;
+}
+
+.img-fixed {
+    display: block;
     right: 0;
 }
 
@@ -140,5 +147,15 @@ body {
     .dot {
         width: 16px;
         height: 16px;
+    }
+}
+
+/*=============== ANIMATION ===============*/
+@keyframes showImg {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0;
     }
 }
