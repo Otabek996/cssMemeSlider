@@ -91,6 +91,10 @@ body {
 }
 
 @media screen and (max-width: 750px) {
+    .slider-container {
+        margin: 30px;
+    }
+
     .slider-images img {
         height: 300px;
     }
@@ -103,5 +107,38 @@ body {
     .slider-text {
         width: 100%;
         text-align: start;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .slider-container {
+        margin: 20px;
+    }
+
+    .slider-images img {
+        height: 230px;
+    }
+
+    .text {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .slider-container {
+        margin: 15px;
+    }
+
+    .slider-images img {
+        height: 200px;
+    }
+
+    .text {
+        font-size: 22px;
+    }
+
+    .dot {
+        width: 16px;
+        height: 16px;
     }
 }
