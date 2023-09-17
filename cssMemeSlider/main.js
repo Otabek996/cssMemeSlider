@@ -17,6 +17,16 @@ const textImage = {
     imgFour: "We are ******"
 };
 
+const textSwiping = [
+    { transform: "translateX(100%)" },
+    { transform: "translateX(0%)" },
+];
+  
+const textTiming = {
+    duration: 350,
+    iterations: 1
+};
+
 const changeImg = (img, btn) => {
     if (imgOne.classList.value == "img img-active") {
         imgOne.classList.remove("img-active");
@@ -38,6 +48,7 @@ const changeImg = (img, btn) => {
     img.classList.add("img-active");
     btn.classList.add("active");
     text.innerText = textImage[img.id];
+    text.animate(textSwiping, textTiming);
 }
 
 btnOne.addEventListener("click", () => {
@@ -52,4 +63,3 @@ btnThree.addEventListener("click", () => {
 btnFour.addEventListener("click", () => {
     changeImg(imgFour, btnFour);
 })
-
