@@ -34,8 +34,8 @@ body {
     display: block;
     position: inherit;
     right: 0;
-    animation: 0.5s ease-in slider;
-    animation-iteration-count: 1;
+    /* animation: 0.5s ease-in slider;
+    animation-iteration-count: 1; */
 }
 
 .slider-card {
@@ -152,7 +152,7 @@ body {
 }
 
 /*=============== ANIMATION ===============*/
-@keyframes slider {
+/* @keyframes slider {
     from {transform: translateX(100%);}
     to {transform: translateX(0);}
-}
+} */

@@ -17,12 +17,12 @@ const textImage = {
     imgFour: "We are ******"
 };
 
-const textSwiping = [
+const animateSwiping = [
     { transform: "translateX(100%)" },
     { transform: "translateX(0%)" },
 ];
   
-const textTiming = {
+const animateTiming = {
     duration: 350,
     iterations: 1
 };
@@ -46,9 +46,10 @@ const changeImg = (img, btn) => {
     };
 
     img.classList.add("img-active");
+    img.animate(animateSwiping, animateTiming);
     btn.classList.add("active");
     text.innerText = textImage[img.id];
-    text.animate(textSwiping, textTiming);
+    text.animate(animateSwiping, animateTiming);
 }
 
 btnOne.addEventListener("click", () => {
