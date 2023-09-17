@@ -55,7 +55,13 @@ body {
 .slider-dots {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 8px;
+}
+
+.dot-box {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .dot {
@@ -65,18 +71,17 @@ body {
     border: 2px solid rgba(105, 105, 240, 0.5);
     border-radius: 50%;
     transition: all 0.3s;
-    cursor: pointer;
 }
 
-.dot:hover {
+.dot-box:hover .dot {
     background: white;
 }
 
-.dot.active {
+.dot-box.active .dot {
     background: rgb(58, 58, 58);
 }
 
-.dot.active:hover {
+.dot-box.active:hover .dot {
     border-color: white;
 }
 
