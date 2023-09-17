@@ -17,7 +17,6 @@ body {
 .slider-images {
     display: flex;
     align-items: center;
-    position: relative;
     overflow-x: hidden;
 }
 
@@ -25,17 +24,11 @@ body {
     width: 100%;
     height: 43.75rem;
     border-radius: 0.625rem;
-    position: absolute;
-    right: -100%;
     display: none;
 }
 
 .img-active {
     display: block;
-    position: inherit;
-    right: 0;
-    /* animation: 0.5s ease-in slider;
-    animation-iteration-count: 1; */
 }
 
 .slider-card {
@@ -150,9 +143,3 @@ body {
         height: 1rem;
     }
 }
-
-/*=============== ANIMATION ===============*/
-/* @keyframes slider {
-    from {transform: translateX(100%);}
-    to {transform: translateX(0);}
-} */
